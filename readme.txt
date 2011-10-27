@@ -5,7 +5,7 @@ Requires at least: 3.0
 Tested up to: 3.1.3
 Stable tag: trunk
 
-Displays all the post's attached images on the Edit screen
+Displays all the post's attached images on the Edit screen.
 
 == Description ==
 

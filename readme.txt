@@ -38,4 +38,5 @@ The image size displayed in the metabox. Default: thumbnail
 
 = 1.0 =
 * Release of plugin
+* Added italian translation (thanks mad_max)
 

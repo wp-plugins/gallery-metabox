@@ -4,7 +4,7 @@ Plugin Name: Gallery Metabox
 Plugin URI: http://www.billerickson.net
 Description: Displays all the post's attached images on the Edit screen
 Author: Bill Erickson
-Version: 1.0
+Version: 1.1
 Author URI: http://www.billerickson.net
 */
 

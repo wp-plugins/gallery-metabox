@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Gallery Metabox
-Plugin URI: http://www.billerickson.net
+Plugin URI: http://wordpress.org/extend/plugins/gallery-metabox/
 Description: Displays all the post's attached images on the Edit screen
 Author: Bill Erickson
-Version: 1.1
+Version: 1.2
 Author URI: http://www.billerickson.net
 */
 
@@ -34,7 +34,7 @@ function be_gallery_metabox_add() {
 		// Get post ID
 		if( isset( $_GET['post'] ) ) $post_id = $_GET['post'];
 		elseif( isset( $_POST['post_ID'] ) ) $post_id = $_POST['post_ID'];
-		if( !isset( $post_id ) ) return;
+		if( !isset( $post_id ) ) $post_id = false;
 		
 		// Granular filter so you can limit it to single page or page template
 		if( apply_filters( 'be_gallery_metabox_limit', true, $post_id ) )
@@ -51,7 +51,7 @@ add_action( 'add_meta_boxes', 'be_gallery_metabox_add' );
  *
  */
 function be_gallery_metabox( $post ) {
-
+	
 	$original_post = $post;
 	
 	$args = array(
@@ -78,6 +78,6 @@ function be_gallery_metabox( $post ) {
 		echo '<img src="' . $thumbnail[0] . '" alt="' . get_the_title() . '" /> ';
 	endwhile; 
 	
-	setup_postdata( $original_post );
+	$post = $original_post;
 }
 

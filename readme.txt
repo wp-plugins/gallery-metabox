@@ -47,7 +47,14 @@ Default: Upload Image | Manage Gallery
 The image size displayed in the metabox. 
 Default: thumbnail
 
+`be_gallery_metabox_output`
+The actual HTML to output for each image.
+
 == Changelog ==
+
+= 1.3 =
+* Add output filter
+* Add image description as title
 
 = 1.2 =
 * Fix query reset issue (first fix didn't work)

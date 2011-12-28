@@ -4,7 +4,7 @@ Plugin Name: Gallery Metabox
 Plugin URI: http://wordpress.org/extend/plugins/gallery-metabox/
 Description: Displays all the post's attached images on the Edit screen
 Author: Bill Erickson
-Version: 1.2
+Version: 1.3
 Author URI: http://www.billerickson.net
 */
 
@@ -75,7 +75,7 @@ function be_gallery_metabox( $post ) {
 			
 	while( $loop->have_posts() ): $loop->the_post(); global $post;
 		$thumbnail = wp_get_attachment_image_src( $post->ID, apply_filters( 'be_gallery_metabox_image_size', 'thumbnail' ) );
-		echo '<img src="' . $thumbnail[0] . '" alt="' . get_the_title() . '" /> ';
+		echo apply_filters( 'be_gallery_metabox_output', '<img src="' . $thumbnail[0] . '" alt="' . get_the_title() . '" title="' . get_the_content() . '" /> ', $thumbnail[0], $post );
 	endwhile; 
 	
 	$post = $original_post;

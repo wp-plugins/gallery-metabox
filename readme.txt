@@ -3,7 +3,7 @@ Contributors: billerickson
 Tags: gallery, image, images, metabox
 Requires at least: 3.0
 Tested up to: 3.3
-Stable tag: 1.2
+Stable tag: 1.3
 
 Displays all the post's attached images on the Edit screen.
 
@@ -53,6 +53,7 @@ The actual HTML to output for each image.
 == Changelog ==
 
 = 1.3 =
+* AJAX Refresh of metabox (thanks Zlatko Salbut)
 * Add output filter
 * Add image description as title
 

@@ -90,14 +90,14 @@ function be_gallery_metabox_html( $post_id ) {
 	$return .= apply_filters( 'be_gallery_metabox_intro', $intro );
 
 	
-	$loop = new WP_Query( $args );
-	if( !$loop->have_posts() )
+	$loop = get_posts( $args );
+	if( empty( $loop ) )
 		$return .= '<p>No images.</p>';
 			
-	while( $loop->have_posts() ): $loop->the_post(); global $post;
-		$thumbnail = wp_get_attachment_image_src( $post->ID, apply_filters( 'be_gallery_metabox_image_size', 'thumbnail' ) );
-		$return .= apply_filters( 'be_gallery_metabox_output', '<img src="' . $thumbnail[0] . '" alt="' . get_the_title() . '" title="' . get_the_content() . '" /> ', $thumbnail[0], $post );
-	endwhile; 
+	foreach( $loop as $image ):
+		$thumbnail = wp_get_attachment_image_src( $image->ID, apply_filters( 'be_gallery_metabox_image_size', 'thumbnail' ) );
+		$return .= apply_filters( 'be_gallery_metabox_output', '<img src="' . $thumbnail[0] . '" alt="' . $image->post_title . '" title="' . $image->post_content . '" /> ', $thumbnail[0], $image );
+	endforeach;
 
 	return $return;
 }

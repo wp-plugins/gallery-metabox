@@ -52,6 +52,9 @@ The actual HTML to output for each image.
 
 == Changelog ==
 
+= 1.4 = 
+* Fixed an issue of compatiblity with other plugins
+
 = 1.3 =
 * AJAX Refresh of metabox (thanks Zlatko Salbut)
 * Add output filter

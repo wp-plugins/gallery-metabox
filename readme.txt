@@ -15,7 +15,10 @@ I use the WordPress Gallery a lot on websites I build. It's a wonderful tool, bu
 
 It's also customizable for developers (see documentation).
 
-[Documentation](https://github.com/billerickson/Gallery-Metabox/wiki) | [Support Forum](https://github.com/billerickson/Gallery-Metabox/issues)
+[Documentation](https://github.com/billerickson/Gallery-Metabox/wiki)
+
+**No support will be provided by the developer**
+
 
 == Changelog ==
 
